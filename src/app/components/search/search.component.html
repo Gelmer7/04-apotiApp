@@ -7,5 +7,6 @@
             #termino>
     </div>
 </div>
-<app-loading></app-loading>
-<app-tarjetas [items]= "artistas"></app-tarjetas>
+<app-loading *ngIf="!carregado && !error" class="animated fadeIn fast"></app-loading>
+<app-muestra-error [mensajeError] = "mensajeError" *ngIf="error"></app-muestra-error>
+<app-tarjetas *ngIf="carregado" class="animated fadeIn fast" [items]= "artistas"></app-tarjetas>
