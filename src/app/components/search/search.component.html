@@ -1,0 +1,11 @@
+<div class="row mt-5">
+    <div class="col">
+        <input type="text" 
+            placeholder="Buscar Artista" 
+            class="form-control" 
+            (keyup)="buscar(termino.value)"
+            #termino>
+    </div>
+</div>
+<app-loading></app-loading>
+<app-tarjetas [items]= "artistas"></app-tarjetas>

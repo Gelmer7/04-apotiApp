@@ -1,0 +1,11 @@
+<div class="card-columns mt-5">
+    <div class="card" *ngFor="let item of items">
+        <div class="card-body">
+            <img [src]="item.images | noimage" class="card-img-top" alt="item.name">
+        <h5 class="card-title">{{item.name}}</h5>
+        <p class="card-text"> 
+            <span class="badge badge-pill badge-primary" *ngFor="let artista of item.artists">{{artista.name}}</span>
+        </p>
+        </div>
+    </div>
+</div>
